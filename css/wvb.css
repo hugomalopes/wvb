@@ -1,0 +1,337 @@
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: rgb(202, 247, 255);
+  transition: background-color .2s ease;
+}
+h1 {
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+p {
+  color: #a76e4d;
+  font-size: 1.3em;
+}
+td {
+  color: #a76e4d;
+}
+
+.navbar {
+  transition: background-color .2s ease;
+  height: 70px;
+  opacity: 90%;
+}
+.navbar-header-text {
+  color: rgb(255, 255, 255);
+  font-size: 23px;
+}
+.navbar-header-text a {
+  color: inherit;
+  text-decoration: none;
+  padding: 10px;
+}
+.underline-header-el {
+  position: relative;
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom-width 0.3s ease;
+}
+
+.underline-header-el:hover {
+  color: rgb(202, 247, 255);
+  border-bottom: 2px solid rgb(202, 247, 255);
+}
+
+.underline-header-el::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 100%;
+  height: 2px;
+  background-color: rgb(202, 247, 255);
+  transition: right 0.3s ease;
+}
+
+.underline-header-el:hover::before {
+  right: 0;
+}
+.mouse-hand-pointer {
+  cursor: pointer;
+}
+.parallax-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../res/background.png') center;
+  background-size: cover;
+  z-index: 0; /* Place the background behind the layers */
+}
+
+.parallax-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.layer1 {
+  background-image: url('../res/layer-bits.png');
+  z-index: 1;
+  transform: translateZ(-1px) scale(1.0); /* Adjust translateZ and scale values */
+}
+.layer2 {
+  background-image: url('../res/layer-vera.png');
+  z-index: 2;
+  transform: translateZ(-1px) scale(1.0); /* Adjust translateZ and scale values */
+}
+.parallax-layer video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 3;
+}
+.intro-title {
+  position: relative;
+  margin-top: 70vh;
+  left: 0%;
+  z-index: 4; /* Adjust the z-index if needed */
+  /* fill: rgb(117, 173, 229);  /* color for svg */*/
+}
+.intro-title h1 {
+  margin: 0;
+  font-size: 50px; /* Adjust the font size as needed */
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  opacity: 60%;
+  text-shadow: 8px 8px 15px #000000
+}
+.intro-title a {
+  margin-left: 48vw;
+}
+
+.calendar-content{
+  width: 350px;
+  height: 440px;
+  background: #c1dafa;
+  margin: 40px auto;
+  border-radius: 15px;
+}
+
+.calendar-header{
+  width: 100%;
+  height: 60px;
+  background: rgb(10, 97, 107);
+  font-size: 1.1em;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.calendar-header h2{
+  padding-top: 15px;
+  margin: 0;
+  display: inline-block;
+  
+}
+
+.calendar-header button{
+  display: inline-block;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  height: 100%;
+  width: 60px;
+  font-size: 1.4em;
+  color: #ffffff;
+}
+
+.calendar-header #prev{
+  float: left;
+  padding-left: 20px;
+}
+
+.calendar-header #next{
+  float: right;
+  padding-right: 20px;
+}
+
+#calendar-content{
+  width: 100%;
+  height: 380px;
+  background: #fff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.calendar-weekday{
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  display: inline-block;
+  color: rgb(10, 97, 107);
+  vertical-align: top;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 50px;
+  cursor: pointer;
+  border: 2px dashed transparent;
+}
+
+.calendar-weekday a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+}
+
+.calendar-weekday:hover{
+  font-weight: 900;
+}
+
+.google-calendar {
+  color: inherit;
+  text-decoration: none;
+}
+.google-calendar p {
+  width: fit-content;
+}
+.google-calendar img {
+  padding-left: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.countdown-list {
+  list-style: none; /* Remove default list bullet points */
+  padding: 0;
+  display: flex; /* Use flexbox to arrange elements horizontally */
+}
+
+.countdown-list li {
+  display: inline-block; /* Display the list items horizontally */
+  margin-right: 10px; /* Add some spacing between items */
+  width: 100px;
+  font-size: 1.3em;
+}
+
+#map {
+  height: 450px;
+}
+
+.google-maps-href {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contribute-iban {
+  display: flex;
+}
+.contribute-iban a {
+  display: flex;
+  color: #a76e4d;
+  text-decoration: none;
+}
+.contribute-iban h5 {
+  color: black;
+}
+.contribute-iban p {
+  margin-bottom: 0px;
+  padding-left: 10px;
+  width: fit-content;
+}
+.contribute-iban i {
+  padding-left: 10px;
+}
+
+.contribute-mbway {
+  display: flex;
+  color: #a76e4d;
+}
+.contribute-mbway h5 {
+  color: black;
+}
+.contribute-mbway img {
+  width: 80px;
+}
+.contribute-mbway p {
+  margin-bottom: 0px;
+  padding-left: 10px;
+}
+
+.contribute-revolut {
+  display: flex;
+  color: #a76e4d;
+}
+.contribute-revolut h5 {
+  color: black;
+}
+.contribute-revolut img {
+  width: 50px;
+}
+.contribute-revolut a {
+  color: #a76e4d;
+  text-decoration: none;
+}
+.contribute-revolut p {
+  margin-bottom: 0px;
+  padding-left: 20px;
+}
+#revolut-qr {
+  width: 150px;
+  padding-left: 20px;
+}
+
+/* adjust to smaller screens - mainly mobile */
+@media (max-width: 768px) {
+  h1 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  .navbar {
+    height: 40px;
+  }
+  .navbar-header-text {
+    font-size: 0.8em;
+  }
+  .navbar-header-text a {
+    padding: 3px;
+  }
+  .intro-title h1 {
+    font-size: 1.5em;
+  }
+  .calendar-content {
+    width: 260px;
+    height: 325px;
+  }
+  #calendar-content {
+    height: 265px;
+  }
+  .calendar-weekday {
+    width: 36px;
+    height: 36px;
+    font-size: 0.8em;
+  }
+  .countdown-list li {
+    font-size: 0.8em;
+    width: 65px;
+  }
+  #map {
+    width: 93vw;
+    height: 400px;
+  }
+}

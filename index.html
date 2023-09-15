@@ -1,0 +1,282 @@
+<!-- Vera + Bits wedding -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Vera and João are getting married!">
+    <meta name="author" content="Hugo Lopes">
+    <meta name="copyright" content="Copyright © Vera ⚮ João 2023">
+    <!-- social media sharing display -->
+    <meta property="og:title" content="Vera and João are getting married" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="res/wring.png" />
+    <meta name="twitter:title" content="Vera and João are getting married">
+    <meta name="twitter:description" content="Let's get them married!">
+    <meta name="twitter:image" content="res/wring.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- tab image -->
+    <link rel="icon" href="res/map-icon-ring.png">
+    <!-- Bootrstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Bricolage+Grotesque:opsz,wght@10..48,200&family=Caveat:wght@500&family=Caprasimo&family=Comfortaa&family=Indie+Flower&family=Josefin+Sans:wght@100;500&family=Kalam:wght@300;700&family=Outfit:wght@100;400&family=Pacifico&family=Poiret+One&family=Rajdhani:wght@300;500&family=Roboto+Condensed:wght@300;400&family=Rubik:wght@300&family=Saira+Condensed:wght@300&family=Shadows+Into+Light&family=Signika+Negative:wght@500&family=Ysabeau+SC:wght@100&display=swap" rel="stylesheet"> -->
+    <!-- Leaflet map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <!-- WVB CSS -->
+    <link rel="stylesheet" href="css/wvb.css">
+    <title>Vera ⚮ João 2023</title>
+  </head>
+
+  <body>
+    <!-- header/navbar -->
+    <header class="header">
+      <nav id="nb" class="navbar fixed-top">
+        <div class="container-fluid justify-content-end">
+          <div class="navbar-header navbar-header-text">
+            <a class="underline-header-el" id="banana-i18n-when" data-i18n="when" href="#when"></a> •
+            <a class="underline-header-el" id="banana-i18n-where" data-i18n="where" href="#where"></a> •
+            <a class="underline-header-el" id="banana-i18n-why" data-i18n="why" href="#why"></a> •
+            <a class="underline-header-el" href="#🎁">🎁</a> •
+            <a id="language-flag-pt" data-lang="pt" class="mouse-hand-pointer">🇵🇹</a>
+            <a id="language-flag-uk"data-lang="uk" class="mouse-hand-pointer">🇬🇧</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- parallax intro -->
+    <div class="parallax-container">
+      <div class="background-image background-change navbar-change" data-bgcolor="rgb(10, 97, 107)" data-nbcolor="transparent"></div>
+      <div id="layer1" class="parallax-layer layer1"></div>
+      <div id="layer2" class="parallax-layer layer2"></div>
+      <div id="layer3" class="parallax-layer layer3">
+        <video autoplay loop muted playsinline>
+          <source src="res/fish.webm" type="video/webm; codecs="hevc">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div id="layer4" class="intro-title">
+        <!-- Curve line path for text
+        <svg viewBox="0 0 500 500">
+          <path id="curve" fill="transparent" d="M31,158 C183,245 421,272 571,181"/>
+          <text width="500" opacity="0.4">
+            <textPath xlink:href="#curve" id="banana-i18n-title" data-i18n="title"></textPath>
+          </text>
+        </svg> -->
+        <h1 id="banana-i18n-title" data-i18n="title"></h1>
+        <br>
+        <a href="#when" class="btn btn-outline-light rounded-circle">
+          <i class="fa fa-caret-down animated"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- when -->
+    <div id="when" class="container mt-5 background-change navbar-change" data-bgcolor="rgb(202, 247, 255)" data-nbcolor="rgb(10, 97, 107)">
+      <div class="row">
+        <div class="col">
+          <h1 id="banana-i18n-when" data-i18n="when"></h1>
+        </div>
+      </div>
+      <div class="row d-flex align-items-center">
+        <div class="col-md-6">
+          <div class="calendar-content">
+            <div class="calendar-header">
+              <button id="calendar-prev" class="text-right"><</button>
+              <h2><span id="calendar-month"></span><span> </span><span id="calendar-year"></span></h2>
+              <button id="calendar-next">></button>
+            </div>
+            <div id="calendar-content"></div>
+          </div>
+        </div>
+        <div class="col-md-6 text-center">
+          <h3 class="d-flex justify-content-center" id="banana-i18n-when-date1" data-i18n="when-date1"></h3>
+          <a class="d-flex justify-content-center google-calendar" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Casamento%20Vera%20⚮%20João&dates=20231104T110000/20231104T110000&details=Wedding%20Vera%20⚮%20João&location=Igreja%20de%20Santa%20Maria%20de%20Loures,%20R.%20Fria%201,%202670%20Loures,%20Portugal&sf=true&output=xml" target="_blank">
+            <p id="banana-i18n-when-date2" data-i18n="when-date2"></p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg" alt="Icon">
+          </a>
+          <br>
+          <br>
+          <h3 class="d-flex justify-content-center" id="banana-i18n-when-date3" data-i18n="when-date3"></h3>
+          <div class="d-flex justify-content-center" id="when-countdown">
+            <ul class="countdown-list text-center">
+              <li><span id="countdown-days"></span><br><span id="banana-i18n-when-days" data-i18n="when-days"></span></li>
+              <li><span id="countdown-hours"></span><br><span id="banana-i18n-when-hours" data-i18n="when-hours"></span></li>
+              <li><span id="countdown-minutes"></span><br><span id="banana-i18n-when-minutes" data-i18n="when-minutes"></span></li>
+              <li><span id="countdown-seconds"></span><br><span id="banana-i18n-when-seconds" data-i18n="when-seconds"></span></li>
+            </ul>
+          </div>
+         </div>
+      </div>
+    </div>
+
+    <!-- where -->
+    <div id="where" class="container mt-5">
+      <div class="row">
+        <div class="col">
+          <h1 id="banana-i18n-where" data-i18n="where"></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h3 id="banana-i18n-where-ceremony1" data-i18n="where-ceremony1"></h3>
+          <a class="google-maps-href" href="https://goo.gl/maps/zGdJjaaADsWEmQLP6" target="_blank">
+            <p id="banana-i18n-where-ceremony2" data-i18n="where-ceremony2"></p>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <h3 id="banana-i18n-where-reception1" data-i18n="where-reception1"></h3>
+          <a class="google-maps-href" href="https://goo.gl/maps/7NkeoRprgBF2rApQ9" target="_blank">
+            <p id="banana-i18n-where-reception2" data-i18n="where-reception2"></p>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- why -->
+    <div id="why" class="container mt-5">
+      <div class="row">
+        <div class="col">
+          <h1 id="banana-i18n-why" data-i18n="why"></h1>
+          <h4 id="banana-i18n-why-description" data-i18n="why-description"></h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🎁 -->
+    <div id="🎁" class="container mt-5">
+      <div class="row">
+        <div class="col">
+          <h1 id="banana-i18n-contribute" data-i18n="contribute"></h1>
+          <p id="banana-i18n-contribute-description" data-i18n="contribute-description"></p>
+          <br>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <br>
+            <h3>Vera</h3>
+            <br>
+            <div class="contribute-iban d-flex align-items-center">
+              <h5> • IBAN</h5>
+              <a id="iban-vera" class="mouse-hand-pointer" data-iban="PT50000201231234567890154">
+                <p>PT50 0002 0123 1234 5678 9015 4</p>
+                <i class="fa fa-clone"></i>
+              </a>
+            </div>
+            <br>
+            <div class="contribute-mbway d-flex align-items-center">
+              <h5> • </h5>
+              <img src="res/mbway.svg" alt="Icon">
+              <i class="fa fa-user"></i>
+              <p> +351 967 861 367</p>
+            </div>
+            <br>
+            <div class="contribute-revolut d-flex align-items-center">
+              <h5> • </h5>
+              <img src="res/revolut.svg" alt="Icon">
+              <img id="revolut-qr" src="res/revolut-qr.jpg">
+              <a href="https://revolut.me/vera44ok7" target="_blank">
+                <p>revolut.me/vera44ok7</p>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <br>
+            <h3>João</h3>
+            <br>
+            <div class="contribute-iban d-flex align-items-center">
+              <h5> • IBAN</h5>
+              <a id="iban-bits" class="mouse-hand-pointer" data-iban="PT50000201231234567890154">
+                <p>PT50 0002 0123 1234 5678 9015 4</p>
+                <i class="fa fa-clone"></i>
+              </a>
+            </div>
+            <br>
+            <div class="contribute-mbway d-flex align-items-center">
+              <h5> • </h5>
+              <img src="res/mbway.svg" alt="Icon">
+              <i class="fa fa-user"></i>
+              <p> +351 919 018 866</p>
+            </div>
+            <br>
+            <div class="contribute-revolut d-flex align-items-center">
+              <h5> • </h5>
+              <img src="res/revolut.svg" alt="Icon">
+              <img id="revolut-qr" src="res/revolut-qr.jpg">
+              <a href="https://revolut.me/joocarps7c" target="_blank">
+                <p>revolut.me/joocarps7c</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thank you -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col text-center">
+          <h1 id="banana-i18n-thanks" data-i18n="thanks"></h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- chat -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col">
+          <h1 id="banana-i18n-message" data-i18n="message"></h1>
+          <br>
+          <div>
+            <widgetbot
+              server="1065666412158402560"
+              channel="1065666412636557317"
+              width="100%"
+              height="400px"
+            ></widgetbot>
+            <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark py-3 mt-5">
+      <div class="container">
+        <p class="text-center text-white mb-0">Copyright &copy; Vera ⚮ João 2023</p>
+      </div>
+    </footer>
+
+    <!-- WidgetBot.io script -->
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+      new Crate({
+        server: '1065666412158402560',
+        channel: '1065666412636557317',
+      })
+    </script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <!-- Leaflet map -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- banana-i18n - for localization -->
+    <script src="https://cdn.jsdelivr.net/npm/banana-i18n@2.3.3/dist/banana-i18n.min.js"></script>
+    <!-- WVB JS -->
+    <script src="js/wvb.js"></script>
+  </body>
+</html>
