@@ -238,9 +238,6 @@ td {
   text-decoration: none;
 }
 
-.contribute-iban {
-  display: flex;
-}
 .contribute-iban a {
   display: flex;
   color: #a76e4d;
@@ -292,8 +289,8 @@ td {
   padding-left: 20px;
 }
 #revolut-qr {
-  width: 150px;
-  padding-left: 20px;
+  width: 215px;
+  padding-left: 30px;
 }
 
 /* adjust to smaller screens - mainly mobile */

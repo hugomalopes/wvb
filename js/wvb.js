@@ -76,8 +76,8 @@ language_flag_elements.forEach(lfe => {
 
 // Calendar
 function drawCalendar(year, month, event_year, event_month, event_day) {
-    var month_list = ['JAN', 'FEB','MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
-    var weekday_list = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    var month_list = ['JAN', 'FEV', 'MAR', 'ABR', 'MAI', 'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', 'DEZ'];
+    var weekday_list = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
 
     var year_div = document.getElementById("calendar-year");
     var month_div = document.getElementById("calendar-month");
@@ -245,10 +245,10 @@ const layer2 = document.getElementById('layer2');
 window.addEventListener('scroll', () => {
     const scrollTop = window.pageYOffset;
 
-    const layer1_scale = 1 + scrollTop * 0.0004; // Adjust scale factor
+    const layer1_scale = 1 + scrollTop * 0.0010; // Adjust scale factor
     const layer1_xPos = scrollTop * 0.005;
 
-    const layer2_scale = 1 + scrollTop * 0.0007; // Adjust scale factor
+    const layer2_scale = 1 + scrollTop * 0.0017; // Adjust scale factor
     const layer2_xPos = -scrollTop * 0.008;
 
     const layer4_scale = 1 + scrollTop * 0.0005; // Adjust scale factor
